@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
 
   def show
   end
-  
+
   def new
     @product = Product.new
   end
@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-  
+
   def edit
   end
 
@@ -44,6 +44,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.expect(product: [ :name, :description, :featured_image ])
+      params.expect(product: [ :name, :description, :featured_image, :inventory_count ])
     end
 end

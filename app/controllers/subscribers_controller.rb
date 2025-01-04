@@ -1,7 +1,7 @@
 class SubscribersController < ApplicationController
     allow_unauthenticated_access
     before_action :set_product
-    generates_token_for :unsubscribe
+    
 
     def create
       @product.subscribers.where(subscriber_params).first_or_create
